@@ -42,9 +42,7 @@ jobs:
           git push 
           
       - name: third commit
-        run: 
-          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
-          echo $d > dump.md
+        run: sed -i '$d' dump.md
         
       - name: finishing
         run: |
